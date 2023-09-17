@@ -11,7 +11,7 @@ World Tracker is a web application developed using React.js that allows users to
 
 ## Demo
 
-You can try out a live demo of the application [here](https://countrypedia-etemadi.netlify.app/).
+You can try out a live demo of the application [here](https://worldtracker-etemadi.netlify.app/).
 
 ## Technologies Used
 
