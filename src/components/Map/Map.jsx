@@ -10,10 +10,10 @@ import {
 
 import styles from './Map.module.css';
 import { useEffect, useState } from 'react';
-import { useCities } from '../contexts/CitiesContext';
-import { useGeolocation } from '../hooks/useGeolocation';
-import { useUrlPosition } from '../hooks/useUrlPosition';
-import Button from './Button';
+import { useCities } from '../../contexts/CitiesContext';
+import { useGeolocation } from '../../hooks/useGeolocation';
+import { useUrlPosition } from '../../hooks/useUrlPosition';
+import Button from '../Buttons/Button';
 
 function Map() {
   const { cities } = useCities();

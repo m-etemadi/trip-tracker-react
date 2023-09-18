@@ -1,6 +1,6 @@
-# World Tracker
+# Trip Tracker
 
-World Tracker is a web application developed using React.js that allows users to log their travel experiences by clicking on a map. Users can add details about the places they have visited, including the city name (auto-filled based on the map click), a note about their experience, and the travel date. The application also provides a list of all the places they have visited.
+Trip Tracker is a web application developed using React.js that allows users to log their travel experiences by clicking on a map. Users can add details about the places they have visited, including the city name (auto-filled based on the map click), a note about their experience, and the travel date. The application also provides a list of all the places they have visited.
 
 ## Features
 
@@ -11,7 +11,7 @@ World Tracker is a web application developed using React.js that allows users to
 
 ## Demo
 
-You can try out a live demo of the application [here](https://worldtracker-etemadi.netlify.app/).
+You can try out a live demo of the application [here](https://triptracker-etemadi.netlify.app/).
 
 ## Technologies Used
 
@@ -24,8 +24,8 @@ You can try out a live demo of the application [here](https://worldtracker-etema
 
 To run the application locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/m-etemadi/world-tracker-react.git`
-2. Navigate to the project directory: `cd world-tracker-react`
+1. Clone the repository: `git clone https://github.com/m-etemadi/trip-tracker-react.git`
+2. Navigate to the project directory: `cd trip-tracker-react`
 3. Install the dependencies: `npm install`
 4. Start the development server: `npm run dev`
 5. Start the jSON server: `npm run server`

@@ -1,8 +1,7 @@
 import { createContext, useContext, useEffect, useReducer } from 'react';
 
-// const BASE_URL = 'https://m-etemadi.github.io/world-tracker-react/cities.json';
-const BASE_URL =
-  'https://raw.githubusercontent.com/m-etemadi/world-tracker-react/main/data/cities.json';
+const BASE_URL = `http://localhost:9000`;
+
 const CitiesContext = createContext();
 
 const initialState = {

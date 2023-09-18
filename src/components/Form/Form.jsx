@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useUrlPosition } from '../hooks/useUrlPosition';
-import { useCities } from '../contexts/CitiesContext';
+import { useUrlPosition } from '../../hooks/useUrlPosition';
+import { useCities } from '../../contexts/CitiesContext';
 import DatePicker from 'react-datepicker';
-import Button from './Button';
-import BackButton from './BackButton';
-import styles from './Form.module.css';
-import Message from './Message';
-import Spinner from './Spinner';
+import Button from '../Buttons/Button';
+import BackButton from '../Buttons/BackButton';
+import styles from '../Form/Form.module.css';
+import Message from '../Message/Message';
+import Spinner from '../Spinner/Spinner';
 
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -85,6 +85,7 @@ function Form() {
       date,
       notes,
       position: { lat, lng },
+      id: Date.now(),
     };
 
     await createCity(newCity);

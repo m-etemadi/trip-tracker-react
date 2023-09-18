@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import Logo from '../components/Logo';
-import styles from './Homepage.module.css';
+import Logo from '../../components/Logo/Logo';
+import styles from '../Homepage/Homepage.module.css';
 
 export default function Homepage() {
   return (
@@ -11,7 +11,7 @@ export default function Homepage() {
         <h2>
           You travel the world.
           <br />
-          World Tracker keeps track of your adventures.
+          Trip Tracker keeps track of your adventures.
         </h2>
         <h3>
           An interactive world map that traces your footsteps across every city,

@@ -2,14 +2,14 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { CitiesProvider } from './contexts/CitiesContext';
 import { AuthProvider } from './contexts/FakeAuthContext';
 import ProtectedRout from './Pages/ProtectedRout';
-import Homepage from './Pages/Homepage';
-import Login from './Pages/Login';
+import Homepage from './Pages/Homepage/Homepage';
+import Login from './Pages/Login/Login';
 import PageNotFound from './Pages/PageNotFound';
-import AppLayout from './Pages/AppLayout';
-import CityList from './components/CityList';
-import CountryList from './components/CountryList';
-import City from './components/City';
-import Form from './components/Form';
+import AppLayout from './Pages/AppLayout/AppLayout';
+import CityList from './components/CityList/CityList';
+import CountryList from './components/CountryList/CountryList';
+import City from './components/City/City';
+import Form from './components/Form/Form';
 
 function App() {
   return (

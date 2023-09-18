@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { useCities } from '../contexts/CitiesContext';
-import styles from './CityItem.module.css';
+import { useCities } from '../../contexts/CitiesContext';
+import styles from '../CityItem/CityItem.module.css';
 
 const formatDate = date =>
   new Intl.DateTimeFormat('en', {
@@ -15,7 +15,7 @@ function CityItem({ city }) {
 
   function handleDelete(e) {
     e.preventDefault();
-    deleteCity(id);
+    deleteCity(Number(id));
   }
 
   return (

@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import { useAuth } from '../contexts/FakeAuthContext';
+import { useAuth } from '../../contexts/FakeAuthContext';
 import { useNavigate } from 'react-router-dom';
-import Logo from '../components/Logo';
-import Button from '../components/Button';
-import styles from './Login.module.css';
+import Logo from '../../components/Logo/Logo';
+import Button from '../../components/Buttons/Button';
+import styles from '../Login/Login.module.css';
 
 export default function Login() {
   const { login, isAuthenticated } = useAuth();
