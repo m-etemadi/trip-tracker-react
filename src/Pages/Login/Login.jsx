@@ -7,7 +7,7 @@ import styles from '../Login/Login.module.css';
 
 export default function Login() {
   const { login, isAuthenticated } = useAuth();
-  const [email, setEmail] = useState('john@worldtracker.com');
+  const [email, setEmail] = useState('john@triptracker.com');
   const [password, setPassword] = useState('1234John');
   const navigate = useNavigate();
 
