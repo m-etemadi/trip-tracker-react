@@ -1,22 +1,16 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useUrlPosition } from '../../hooks/useUrlPosition';
-import { useCities } from '../../contexts/CitiesContext';
 import DatePicker from 'react-datepicker';
-import Button from '../Buttons/Button';
-import BackButton from '../Buttons/BackButton';
-import styles from '../Form/Form.module.css';
-import Message from '../Message/Message';
-import Spinner from '../Spinner/Spinner';
-
 import 'react-datepicker/dist/react-datepicker.css';
 
-const popperModifiers = [
-  {
-    name: 'arrow',
-    options: { padding: 24 },
-  },
-];
+import Button from '../Buttons/Button';
+import BackButton from '../Buttons/BackButton';
+
+import styles from './Form.module.css';
+import { useUrlPosition } from '../../hooks/useUrlPosition';
+import Message from '../Message/Message';
+import Spinner from '../Spinner/Spinner';
+import { useCities } from '../../contexts/CitiesContext';
+import { useNavigate } from 'react-router-dom';
 
 export function convertToEmoji(countryCode) {
   const codePoints = countryCode
@@ -34,12 +28,12 @@ function Form() {
   const navigate = useNavigate();
 
   const [isLoadingGeocoding, setIsLoadingGeocoding] = useState(false);
-  const [geocodingError, setGeocodingError] = useState('');
   const [cityName, setCityName] = useState('');
   const [country, setCountry] = useState('');
   const [date, setDate] = useState(new Date());
   const [notes, setNotes] = useState('');
   const [emoji, setEmoji] = useState('');
+  const [geocodingError, setGeocodingError] = useState('');
 
   useEffect(
     function () {
@@ -49,14 +43,16 @@ function Form() {
         try {
           setIsLoadingGeocoding(true);
           setGeocodingError('');
+
           const res = await fetch(
             `${BASE_URL}?latitude=${lat}&longitude=${lng}`
           );
           const data = await res.json();
+          console.log(data);
 
           if (!data.countryCode)
             throw new Error(
-              `That doesn't seem to be a city. Click somewhere else 😉`
+              "That doesn't seem to be a city. Click somewhere else 😉"
             );
 
           setCityName(data.city || data.locality || '');
@@ -85,7 +81,6 @@ function Form() {
       date,
       notes,
       position: { lat, lng },
-      id: Date.now(),
     };
 
     await createCity(newCity);
@@ -95,7 +90,7 @@ function Form() {
   if (isLoadingGeocoding) return <Spinner />;
 
   if (!lat && !lng)
-    return <Message message="Start by clicking somewhere on the map." />;
+    return <Message message="Start by clicking somewhere on the map" />;
 
   if (geocodingError) return <Message message={geocodingError} />;
 
@@ -116,12 +111,12 @@ function Form() {
 
       <div className={styles.row}>
         <label htmlFor="date">When did you go to {cityName}?</label>
+
         <DatePicker
           id="date"
           onChange={date => setDate(date)}
           selected={date}
           dateFormat="dd/MM/yyyy"
-          popperModifiers={popperModifiers}
         />
       </div>
 

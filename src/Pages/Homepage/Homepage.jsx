@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import Logo from '../../components/Logo/Logo';
-import styles from '../Homepage/Homepage.module.css';
+import Logo from '../../components//Logo/Logo';
+import styles from './Homepage.module.css';
 
 export default function Homepage() {
   return (

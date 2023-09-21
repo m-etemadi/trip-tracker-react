@@ -1,7 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import AppNav from '../AppNav/AppNav';
 import Logo from '../Logo/Logo';
-import Footer from '../Footer/Footer';
 import styles from './Sidebar.module.css';
 
 function Sidebar() {
@@ -9,8 +8,14 @@ function Sidebar() {
     <div className={styles.sidebar}>
       <Logo />
       <AppNav />
+
       <Outlet />
-      <Footer />
+
+      <footer className={styles.footer}>
+        <p className={styles.copyright}>
+          &copy; Copyright {new Date().getFullYear()} by TripTracker Inc.
+        </p>
+      </footer>
     </div>
   );
 }

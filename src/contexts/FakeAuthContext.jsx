@@ -11,10 +11,8 @@ function reducer(state, action) {
   switch (action.type) {
     case 'login':
       return { ...state, user: action.payload, isAuthenticated: true };
-
     case 'logout':
       return { ...state, user: null, isAuthenticated: false };
-
     default:
       throw new Error('Unknown action');
   }
@@ -23,7 +21,7 @@ function reducer(state, action) {
 const FAKE_USER = {
   name: 'John',
   email: 'john@triptracker.com',
-  password: '1234John',
+  password: 'John1234',
   avatar: 'https://i.pravatar.cc/100?u=zz',
 };
 
@@ -52,7 +50,7 @@ function AuthProvider({ children }) {
 function useAuth() {
   const context = useContext(AuthContext);
   if (context === undefined)
-    throw new Error('CitiesContext was used outside the CitiesProvider');
+    throw new Error('AuthContext was used outside AuthProvider');
   return context;
 }
 

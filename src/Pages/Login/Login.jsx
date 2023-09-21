@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react';
-import { useAuth } from '../../contexts/FakeAuthContext';
 import { useNavigate } from 'react-router-dom';
-import Logo from '../../components/Logo/Logo';
 import Button from '../../components/Buttons/Button';
-import styles from '../Login/Login.module.css';
+import { useAuth } from '../../contexts/FakeAuthContext';
+import styles from './Login.module.css';
+import Logo from '../../components//Logo/Logo';
 
 export default function Login() {
-  const { login, isAuthenticated } = useAuth();
+  // PRE-FILL FOR DEV PURPOSES
   const [email, setEmail] = useState('john@triptracker.com');
-  const [password, setPassword] = useState('1234John');
+  const [password, setPassword] = useState('John1234');
+
+  const { login, isAuthenticated } = useAuth();
   const navigate = useNavigate();
 
   function handleSubmit(e) {
