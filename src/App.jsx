@@ -12,7 +12,7 @@ import Form from './components/Form/Form';
 import SpinnerFullPage from './components/SpinnerFullPage/SpinnerFullPage';
 
 const Homepage = lazy(() => import('./pages/Homepage/Homepage'));
-const Login = lazy(() => import('./pages//Login/Login'));
+const Login = lazy(() => import('./pages/Login/Login'));
 const AppLayout = lazy(() => import('./pages/AppLayout/AppLayout'));
 const PageNotFound = lazy(() => import('./pages/PageNotFound'));
 
