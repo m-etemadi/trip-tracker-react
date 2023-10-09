@@ -61,28 +61,16 @@
       "id": 3645647
     },
     {
-      "cityName": "Horselberg-Hainich",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2023-10-08T04:31:19.923Z",
-      "notes": "nhkjh",
-      "position": {
-        "lat": "51.06901665960392",
-        "lng": "10.524902343750002"
-      },
-      "id": 98443199
-    },
-    {
-      "cityName": "Ḩasanabad",
-      "country": "Iran (Islamic Republic of)",
-      "emoji": "🇮🇷",
-      "date": "2023-10-08T04:40:32.739Z",
+      "cityName": "Zagreb",
+      "country": "Croatia",
+      "emoji": "🇭🇷",
+      "date": "2023-10-09T02:06:48.686Z",
       "notes": "",
       "position": {
-        "lat": "35.38904996691167",
-        "lng": "51.32812500000001"
+        "lat": "45.75219336063106",
+        "lng": "15.974121093750002"
       },
-      "id": 98443200
+      "id": 98443199
     }
   ]
 }

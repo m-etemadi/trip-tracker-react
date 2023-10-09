@@ -68,12 +68,13 @@ function Form() {
     [lat, lng]
   );
 
-  async function handleSubmit(e) {
+  function handleSubmit(e) {
     e.preventDefault();
 
     if (!cityName || !date) return;
 
     const newCity = {
+      id: Date.now(),
       cityName,
       country,
       emoji,
@@ -82,7 +83,7 @@ function Form() {
       position: { lat, lng },
     };
 
-    await createCity(newCity);
+    createCity(newCity);
     navigate('/app/cities');
   }
 
